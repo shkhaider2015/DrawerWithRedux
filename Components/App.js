@@ -1,10 +1,14 @@
 import React from 'react'
 import { NavigationDrawer } from './Drawer/NavigationDrawer';
+import { Provider } from "react-redux";
+import { Store } from "./Redux/Store";
 
 
 const App = () =>
 {
-    return <NavigationDrawer />
+    return <Provider store={Store} >
+        <NavigationDrawer />
+    </Provider>
 }
 
 
